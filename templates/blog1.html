@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Welcome to my blog
+{% endblock title %}
+
+{% block body %}
+    
+<div class="container">
+    <div class="row py-4">
+    {% for this_blog in all_blog_items %}
+      <div class="col-md-4">
+        <h2> {{ this_blog.title }} </h2>
+        <pre><p> {{ this_blog.content }} </p></pre>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      {% endfor %}
+    </div>
+    
+
+    
+{% endblock body %}
